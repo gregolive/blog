@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-contents">
+        <%= link_to "Coffee Origins", root_path, class: 'logo' %>
+        <div class="links">
+          <%= link_to "Regions", root_path, class: 'link' %>
+          <%= link_to "Flavors", root_path, class: 'link' %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
