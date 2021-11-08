@@ -1,7 +1,7 @@
 <div class="page">
   <div class="title">
     <h1>All Origins</h1>  
-    <%= link_to "Add Origin", new_article_path, class: 'new-button' %>
+    <%= link_to "+ Origin", new_article_path, class: 'new-button' %>
   </div>
 
   <p>Learn about <%= Article.public_count %> different coffee varities from around the world!</p>
@@ -11,7 +11,7 @@
       <div class="article">
         <%= link_to article.title, article, class:'article-title' %>
         <div class='article-preview'>
-          <%= truncate article.body, length: 70, class:'article-preview' %>
+          <%= truncate article.body, length: 70 %>
         </div>
       </div>
     <% end %>

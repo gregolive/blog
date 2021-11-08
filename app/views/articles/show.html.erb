@@ -1,16 +1,27 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
-
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article),
+<div class="page">
+  <div class="title">
+    <h1><%= @article.title %></h1>
+    <div class="modify">
+      <%= link_to image_tag("edit.svg", alt: "edit button"), edit_article_path(@article) %>
+      <%= link_to image_tag("delete.svg", alt: "delete button"), article_path(@article),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
+                  data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+  <p><%= @article.body %></p>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+  <div class="comments">
+    <h2>Comments</h2>
+    <div class="all-comments">
+      <% if @article.comments.empty? %>
+        <div class="comment-placeholder">Be the first to comment!</div>
+      <% else %>
+        <%= render @article.comments %>
+      <% end %>
+    </div>
+  </div>
+
+  <h2>Add comment</h2>
+  <%= render 'comments/form' %>
+</div>
