@@ -4,7 +4,7 @@
     <%= link_to "+ Origin", new_article_path, class: 'new-button' %>
   </div>
 
-  <p>Learn about <%= Article.public_count %> different coffee varities from around the world!</p>
+  <p class="origin-count">Learn about <%= Article.public_count %> different coffee varities from around the world!</p>
 
   <div class='coffee-list'>
     <% @articles.each do |article| %>
