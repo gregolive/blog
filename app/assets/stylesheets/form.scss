@@ -1,0 +1,43 @@
+$secondary-color: #F3EBE2;
+
+.form-body{
+  background-color: white;
+  padding: 0.25em 0;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 10px 1px $secondary-color;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.form-label {
+  padding-bottom: 0.5em;
+}
+
+.form-control {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.3em 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+
+.form-title {
+  width: 40%;
+}
+
+.article-body {
+  height: 40vh;
+}
+
+input[type=submit] {
+	cursor: pointer;
+  border: none;
+}
+
+input[type=submit]:hover {
+  box-shadow: none;
+}

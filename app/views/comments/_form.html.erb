@@ -1,27 +1,27 @@
 
   <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-    <div class="add-comment">
-    <div>
-      <div class="form-label">
-        <strong><%= form.label :author %></strong><br>
+    <div class="form-body">
+      <div>
+        <div class="form-label">
+          <strong><%= form.label :commenter %></strong><br>
+        </div>
+        <%= form.text_field :commenter, class: ['form-control', 'form-title'] %>
       </div>
-      <%= form.text_field :author, class: ['form-control', 'form-author'] %>
-    </div>
 
-    <div>
-      <div class="form-label">
-        <strong><%= form.label :comment %></strong><br>
+      <div>
+        <div class="form-label">
+          <strong><%= form.label :body %></strong><br>
+        </div>
+        <%= form.text_area :body, class: 'form-control' %>
       </div>
-      <%= form.text_area :comment, class: 'form-control' %>
-    </div>
 
-    <!-- <div>
-      <strong><%= form.label :status %></strong><br>
-      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
-    </div> -->
+      <!-- <div>
+        <strong><%= form.label :status %></strong><br>
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+      </div> -->
 
-    <div>
-      <%= form.submit class: "new-button" %>
-    </div>
+      <div>
+        <%= form.submit class: "new-button" %>
+      </div>
     </div>
   <% end %>

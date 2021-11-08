@@ -17,7 +17,7 @@ h2 {
   font-size: 1.25em;
 }
 
-.all-comments, .add-comment {
+.all-comments {
   background-color: white;
   padding: 0.25em 0;
   border: 1px solid white;
@@ -29,7 +29,7 @@ h2 {
   margin: 0;
   padding: 0.5em 1em;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1em;
   border-bottom: 1px solid $secondary-color;
@@ -47,35 +47,4 @@ h2 {
 .delete-comment {
   height: 1.25em;
   width: auto;
-}
-
-.add-comment {
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.form-label {
-  padding-bottom: 0.5em;
-}
-
-.form-control {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 0.75em;
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing: border-box;
-}
-
-.form-author {
-  width: 30%;
-}
-
-input[type=submit] {
-	cursor: pointer;
-  border: none;
-}
-
-input[type=submit]:hover {
-  box-shadow: none;
 }

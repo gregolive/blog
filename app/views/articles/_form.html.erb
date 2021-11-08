@@ -1,26 +1,32 @@
 <%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+  <div class="form-body">
+    <div>
+      <div class="form-label">
+        <strong><%= form.label :title %><br></strong>
+      </div>
+      <%= form.text_field :title, class: ['form-control', 'form-title'] %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div>
+      <div class="form-label">
+        <strong><%= form.label :body %><br></strong>
+      </div>
+      <%= form.text_area :body, class: ['form-control', 'article-body'] %><br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :status %><br>
-    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
-  </div>
+    <!-- <div>
+      <%= form.label :status %><br>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div> -->
 
-  <div>
-    <%= form.submit %>
+    <div>
+      <%= form.submit "Submit", class: "new-button" %>
+    </div>
   </div>
 <% end %>
