@@ -24,18 +24,3 @@ header {
   font-weight: 700;
   font-size: 2em;
 }
-
-.links {
-  font-weight: bold;
-  font-size: 1.25em;
-  display: flex;
-  gap: 1em;
-}
-
-.link {
-  transition: all .2s ease-in-out;
-}
-
-.link:hover {
-  transform: translateY(3px);
-}
